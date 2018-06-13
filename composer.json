@@ -1,0 +1,32 @@
+{
+    "name": "synergitech/laravel-twig",
+    "description": "This library integrates Twig with the standard Laravel 5 view framework.",
+    "keywords": [
+        "Laravel",
+        "Twig",
+        "View"
+    ],
+    "homepage": "https://github.com/synergitech/laravel-twig",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": ">=5.5.0",
+        "twig/twig": ">=2.4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "SynergiTech\\Twig\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SynergiTech\\Twig\\TwigServiceProvider"
+            ],
+            "aliases": {
+                "Twig": "SynergiTech\\Twig\\Facade\\Twig"
+            }
+
+        }
+    }
+}
