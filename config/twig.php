@@ -14,6 +14,9 @@ return [
     ],
 
     'extensions' => [
+        // 'SynergiTech\Twig\Extension\Vendor\Spatie\Permission',
+        // 'SynergiTech\Twig\Extension\Vendor\Sentry\Sentry',
+
         'SynergiTech\Twig\Extension\Laravel\Auth',
         'SynergiTech\Twig\Extension\Laravel\Config',
         'SynergiTech\Twig\Extension\Laravel\Dump',
@@ -25,6 +28,6 @@ return [
         'SynergiTech\Twig\Extension\Laravel\Gate',
         'SynergiTech\Twig\Extension\Laravel\Mix',
     ],
-    
+
     'filters' => []
 ];

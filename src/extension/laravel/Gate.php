@@ -24,7 +24,7 @@ class Gate extends Twig_Extension
     public function getFunctions()
     {
         return [
-            new Twig_SimpleFunction('gate_check', [$this->gate, 'check']),
+            new Twig_SimpleFunction('can', [$this->gate, 'check']),
         ];
     }
 }
