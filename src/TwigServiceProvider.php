@@ -8,6 +8,8 @@ use \Twig_Loader_Chain;
 use \Twig_Loader_Array;
 use \Twig_Environment;
 
+use InvalidArgumentException;
+
 class TwigServiceProvider extends ViewServiceProvider
 {
     protected function registerCommands()
