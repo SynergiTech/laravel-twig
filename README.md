@@ -24,7 +24,6 @@ Once the configration is exported, you can enable third party extensions or add 
 
 #### Extensions Included
 
-- **Sentry** (Get the last event ID.)
 - **Spatie Laravel Permission** (Added role, hasrole, hasanyrole and hasallroles functions.)
 
 ## Usage

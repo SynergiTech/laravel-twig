@@ -6,7 +6,8 @@ use Illuminate\View\ViewServiceProvider;
 
 use \Twig_Loader_Chain;
 use \Twig_Loader_Array;
-use \Twig_Environment;
+
+use SynergiTech\Twig\TwigEnvironment;
 
 use InvalidArgumentException;
 
@@ -100,7 +101,7 @@ class TwigServiceProvider extends ViewServiceProvider
                     $this->app['twig.options']['autoescape'] = 'html';
                 }
 
-                $twig = new Twig_Environment(
+                $twig = new TwigEnvironment(
                     $this->app['twig.loader'],
                     $this->app['twig.options'],
                     $this->app
@@ -134,7 +135,7 @@ class TwigServiceProvider extends ViewServiceProvider
         );
 
         $this->app->alias('twig', '\Twig_Environment');
-        $this->app->alias('twig', 'SynergiTech\Twig\Twig');
+        $this->app->alias('twig', 'SynergiTech\Twig\TwigEnvironment');
 
         $this->app->bindIf('twig.compiler', function () {
             return new Engine\Compiler($this->app['twig']);

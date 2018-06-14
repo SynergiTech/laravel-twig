@@ -30,7 +30,6 @@ class Url extends Twig_Extension
     {
         return [
             new Twig_SimpleFunction('asset', [$this->url, 'asset'], ['is_safe' => ['html']]),
-            new Twig_SimpleFunction('mix', [$this->url, 'mix'], ['is_safe' => ['html']]),
             new Twig_SimpleFunction('action', [$this->url, 'action'], ['is_safe' => ['html']]),
             new Twig_SimpleFunction('url', [$this, 'url'], ['is_safe' => ['html']]),
             new Twig_SimpleFunction('route', [$this->url, 'route'], ['is_safe' => ['html']]),

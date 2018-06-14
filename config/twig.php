@@ -14,10 +14,9 @@ return [
     ],
 
     'extensions' => [
-        // 'SynergiTech\Twig\Extension\Vendor\Spatie\Permission',
-        // 'SynergiTech\Twig\Extension\Vendor\Sentry\Sentry',
-
-        // 'SynergiTech\Twig\Extension\Laravel\Facade',
+        'SynergiTech\Twig\Extension\Loader\Facades',
+        'SynergiTech\Twig\Extension\Loader\Filters',
+        'SynergiTech\Twig\Extension\Loader\Functions',
 
         'SynergiTech\Twig\Extension\Laravel\Auth',
         'SynergiTech\Twig\Extension\Laravel\Config',
@@ -28,7 +27,14 @@ return [
         'SynergiTech\Twig\Extension\Laravel\Translator',
         'SynergiTech\Twig\Extension\Laravel\Url',
         'SynergiTech\Twig\Extension\Laravel\Gate',
-        'SynergiTech\Twig\Extension\Laravel\Mix',
+
+        // 'SynergiTech\Twig\Extension\Vendor\Spatie\Permission',
+    ],
+
+    'facades' => [],
+
+    'functions' => [
+        'mix'
     ],
 
     'filters' => []
