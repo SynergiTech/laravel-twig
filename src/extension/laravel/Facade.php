@@ -137,8 +137,6 @@ class Facade extends Twig_Extension
      */
     public function getFunction($name)
     {
-        $name = $this->getShortcut($name);
-
         // Check if the function has been cached
         if ($function = $this->getLookup($name)) {
             return $function;
