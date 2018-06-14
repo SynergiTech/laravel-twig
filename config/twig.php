@@ -17,6 +17,8 @@ return [
         // 'SynergiTech\Twig\Extension\Vendor\Spatie\Permission',
         // 'SynergiTech\Twig\Extension\Vendor\Sentry\Sentry',
 
+        // 'SynergiTech\Twig\Extension\Laravel\Facade',
+
         'SynergiTech\Twig\Extension\Laravel\Auth',
         'SynergiTech\Twig\Extension\Laravel\Config',
         'SynergiTech\Twig\Extension\Laravel\Dump',
