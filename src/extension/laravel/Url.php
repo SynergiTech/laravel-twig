@@ -29,6 +29,7 @@ class Url extends Twig_Extension
     public function getFunctions()
     {
         return [
+            new Twig_SimpleFunction('route_is', [$this, 'routeIs'], ['is_safe' => ['html']]),
             new Twig_SimpleFunction('asset', [$this->url, 'asset'], ['is_safe' => ['html']]),
             new Twig_SimpleFunction('action', [$this->url, 'action'], ['is_safe' => ['html']]),
             new Twig_SimpleFunction('url', [$this, 'url'], ['is_safe' => ['html']]),
@@ -46,6 +47,15 @@ class Url extends Twig_Extension
                 }
             ),
         ];
+    }
+
+    public function routeIs($route = null)
+    {
+        if (strpos(\Route::currentRouteName(), $route) === 0) {
+            return true;
+        }
+
+        return false;
     }
 
     public function url($path = null, $parameters = [], $secure = null)
