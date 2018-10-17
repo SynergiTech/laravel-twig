@@ -3,7 +3,7 @@
 namespace SynergiTech\Twig\Extension\Vendor\Spatie;
 
 use \Twig_Extension;
-use \Twig_SimpleFunction;
+use \Twig_Function;
 
 class Permission extends Twig_Extension
 {
@@ -15,30 +15,30 @@ class Permission extends Twig_Extension
     public function getFunctions()
     {
         return [
-            new Twig_SimpleFunction('role', function () {
+            new Twig_Function('role', function ($roleName = "") {
                 if (auth()->check()) {
-                    return [auth()->user(), 'hasRole'];
+                    return auth()->user()->hasRole($roleName);
                 }
 
                 return false;
             }),
-            new Twig_SimpleFunction('hasrole', function () {
+            new Twig_Function('hasrole', function ($roleName = "") {
                 if (auth()->check()) {
-                    return [auth()->user(), 'hasRole'];
+                    return auth()->user()->hasRole($roleName);
                 }
 
                 return false;
             }),
-            new Twig_SimpleFunction('hasanyrole', function () {
+            new Twig_Function('hasanyrole', function ($roleNames = []) {
                 if (auth()->check()) {
-                    return [auth()->user(), 'hasAnyRole'];
+                    return auth()->user()->hasRoles($roleNames);
                 }
 
                 return false;
             }),
-            new Twig_SimpleFunction('hasallroles', function () {
+            new Twig_Function('hasallroles', function ($roleNames = []) {
                 if (auth()->check()) {
-                    return [auth()->user(), 'hasAllRoles'];
+                    return auth()->user()->hasAllRoles($roleNames);
                 }
 
                 return false;
