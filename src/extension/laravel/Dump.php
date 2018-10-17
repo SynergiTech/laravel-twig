@@ -2,7 +2,7 @@
 
 namespace SynergiTech\Twig\Extension\Laravel;
 
-use Illuminate\Support\Debug\HtmlDumper;
+use Symfony\Component\VarDumper\Dumper\HtmlDumper;
 use Symfony\Component\VarDumper\Cloner\VarCloner;
 
 use \Twig_SimpleFunction;
