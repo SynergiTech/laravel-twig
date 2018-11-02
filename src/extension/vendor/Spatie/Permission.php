@@ -31,7 +31,7 @@ class Permission extends Twig_Extension
             }),
             new Twig_Function('hasanyrole', function ($roleNames = []) {
                 if (auth()->check()) {
-                    return auth()->user()->hasRoles($roleNames);
+                    return auth()->user()->hasAnyRole($roleNames);
                 }
 
                 return false;
